@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Absensi</title>
+    <style>
+      body {
+        background-image: url(https://ugm.ac.id/wp-content/uploads/2021/04/30042116197427651065310762.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Container {
+        text-align: center;
+        padding-top: 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        align-items: center;
+      }
+
+      .header {
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-style: oblique;
+      }
+
+      .Isi-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .Isi-form label {
+        margin-bottom: 10px;
+      }
+
+      .Isi-form input[type="text"],
+      .Isi-form select,
+      .Isi-form input[type="date"],
+      .Isi-form input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .Isi-form input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .Isi-form input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <form>
+        <div class="header">
+          <h1>Form absensi praktikum pemrograman web</h1>
+        </div>
+        <div class="Isi-form">
+          <label for="Nama">Nama :</label>
+          <input type="text" id="Nama" name="Nama" required />
+
+          <label for="Nim">Nim:</label>
+          <input type="text" id="Nim" name="Nim" required />
+
+          <label for="Kelas">Pilih kelas :</label>
+          <select id="Kelas" name="Kelas" required>
+            <option value="">Pilih Kelas</option>
+            <option value="Kelas A">Kelas A</option>
+            <option value="Kelas B">Kelas B</option>
+          </select>
+
+          <label for="Tanggal">Tanggal:</label>
+          <input type="date" id="Tanggal" name="Tanggal" required />
+
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
