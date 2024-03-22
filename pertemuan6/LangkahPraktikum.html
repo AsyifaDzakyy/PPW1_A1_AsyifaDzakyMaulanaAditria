@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wraper {
+      display: flex;
+      flex-flow: row wrap;
+      text-align: center;
+    }
+    .wraper > * {
+      padding: 10px;
+      flex: 1 100%;
+    }
+    .head {
+      background-color: tomato;
+    }
+    .footer {
+      background-color: lightgreen;
+    }
+    .main {
+      text-align: left;
+      background-color: deepskyblue;
+    }
+    .aside-1 {
+      background-color: olive;
+    }
+    .aside-2 {
+      background-color: brown;
+    }
+    @media all and (min-width: 600px) {
+      .aside {
+        flex: 1 0 0;
+      }
+    }
+    @media all and (min-width: 800px) {
+      .main {
+        flex: 3 0px;
+      }
+      .aside-1 {
+        order: 1;
+      }
+      .main {
+        order: 2;
+      }
+      .aside-2 {
+        order: 3;
+      }
+      .footer {
+        order: 4;
+      }
+    }
+    body {
+      padding: 2em;
+    }
+  </style>
+  <body>
+    <div class="wraper">
+      <header class="head">header</header>
+      <article class="main">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          repellat eveniet nulla consequatur est voluptate! Quaerat explicabo
+          repellat id odio aut maxime ratione labore excepturi, laboriosam ipsam
+          sed reprehenderit omnis.
+        </p>
+      </article>
+      <aside class="aside aside-1">aside 1</aside>
+      <aside class="aside aside-2">aside 2</aside>
+      <footer class="footer">footer</footer>
+    </div>
+  </body>
+</html>
