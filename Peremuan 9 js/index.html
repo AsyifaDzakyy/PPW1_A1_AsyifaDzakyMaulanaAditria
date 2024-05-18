@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed, Inline, External JavaScript</title>
+    <!-- Eksternal JavaScript -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Contoh JavaScript</h1>
+
+    <!-- Inline JavaScript -->
+    <button onclick="inlineFunction()">Klik Saya (Inline JS)</button>
+
+    <!-- Embed JavaScript -->
+    <script>
+      function embedFunction() {
+        alert("Halo dari Embed JavaScript!");
+      }
+    </script>
+    <button onclick="embedFunction()">Klik Saya (Embed JS)</button>
+    <!-- NO 2 -->
+    <h1>Output JavaScript</h1>
+    <button onclick="showOutputs()">Tampilkan Output</button>
+    <div id="output"></div>
+
+    <script>
+      function showOutputs() {
+        // Output menggunakan console.log()
+        console.log("Ini adalah output menggunakan console.log()");
+
+        // Output menggunakan alert()
+        alert("Ini adalah output menggunakan alert()");
+
+        // Output menggunakan document.write()
+        document.write("Ini adalah output menggunakan document.write() <br>");
+
+        // Output menggunakan innerHTML
+        document.getElementById("output").innerHTML =
+          "Ini adalah output menggunakan innerHTML";
+      }
+    </script>
+  </body>
+</html>
